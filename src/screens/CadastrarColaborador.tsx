@@ -23,9 +23,21 @@ const CadastrarColaborador = ({ navigation }: Props) => {
           <Input placeholder="Área" mb={4} />
           <Input placeholder="Matrícula" mb={4} />
           <Input placeholder="Treinamentos" mb={4} />
-          <Button onPress={() => navigation.navigate('Colaboradores')}>
-            Registrar Colaborador
-          </Button>
+        </Box>
+        <Box>
+        <Button bgColor={"red.500"} margin={5} onPress={() => navigation.navigate('Index')}>
+                    Tela Inicial
+                </Button>
+                
+                <Button bgColor={'pink.500'} margin={5} onPress={() => navigation.navigate('Colaboradores')}>
+                    Lista de Colaboradores
+                </Button>
+                <Button bgColor={'blue.500'} margin={5} onPress={() => navigation.navigate('CadastrarTreinamento')}>
+                    Cadastrar Treinamentos
+                </Button>
+                <Button bgColor={'purple.500'} margin={5} onPress={() => navigation.navigate('Treinamentos')}>
+                    Lista de Treinamentos
+                </Button>
         </Box>
       </Center>
     </NativeBaseProvider>

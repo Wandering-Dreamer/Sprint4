@@ -20,11 +20,16 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const AppNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="Index">
-      <Stack.Screen name="Index" component={Index} />
-      <Stack.Screen name="CadastrarColaborador" component={CadastrarColaborador} />
-      <Stack.Screen name="CadastrarTreinamento" component={CadastrarTreinamento} />
-      <Stack.Screen name="Colaboradores" component={Colaboradores} />
-      <Stack.Screen name="Treinamentos" component={Treinamentos} />
+      <Stack.Screen name="Index" component={Index} options={{ title: 'Tela Inicial' }} />
+
+      <Stack.Screen name="CadastrarColaborador" component={CadastrarColaborador} options={{ title: 'Cadastre o Colaborador' }} />
+
+      <Stack.Screen name="CadastrarTreinamento" component={CadastrarTreinamento} options={{ title: 'Cadastre o Treinamento' }} />
+
+      <Stack.Screen name="Colaboradores" component={Colaboradores} options={{ title: 'Lista de Colaboradores' }}/>
+
+      <Stack.Screen name="Treinamentos" component={Treinamentos} options={{ title: 'Lista de Treinamentos' }}/>
+
     </Stack.Navigator>
   );
 };

@@ -32,13 +32,24 @@ const Colaboradores = ({ navigation }: Props) => {
                 <Text>Área: {item.area}</Text>
                 <Text>Matrícula: {item.matricula}</Text>
                 <Text>Treinamentos: {item.treinamentos}</Text>
-                <Button mt={2} onPress={() => navigation.navigate('Index')}>
-                  Voltar
-                </Button>
               </Box>
             )}
             keyExtractor={(item) => item.id}
           />
+        </Box>
+        <Box>
+        <Button bgColor={"red.500"} margin={5} onPress={() => navigation.navigate('Index')}>
+                    Tela Inicial
+                </Button>
+                <Button bgColor={'emerald.500'} margin={5} onPress={() => navigation.navigate('CadastrarColaborador')}>
+                    Cadastrar Colaboradores
+                </Button>
+                <Button bgColor={'blue.500'} margin={5} onPress={() => navigation.navigate('CadastrarTreinamento')}>
+                    Cadastrar Treinamentos
+                </Button>
+                <Button bgColor={'purple.500'} margin={5} onPress={() => navigation.navigate('Treinamentos')}>
+                    Lista de Treinamentos
+                </Button>
         </Box>
       </Center>
     </NativeBaseProvider>
